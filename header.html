@@ -26,15 +26,15 @@
 				transition: 1s;
 			}
 			.icon {
-				margin-right: 1%;
-				height: 11%;
-				width: 11%;
+				margin-right: 10px;
+				height: calc("70px * attr(height) / attr(width)");
+				width: 90px;
 				border-radius: 8px;
 			}
 			body {
 				display: block;
 				text-align: justify;
-				max-width: 60%;
+				max-width: 65%;
 				background-color: #e9ecef;
 			}
 			.entry {
@@ -45,7 +45,14 @@
 		</style>
 	</head>
 
-	<body>
+	<body onload="onload()">
+		<script>
+			function onload() {
+				if (window.innerWidth < 1000) {
+					document.body.style.maxWidth = `${90}%`;
+				}
+			}
+		</script>
 		<div style="text-align: center">
 			<h1>Sachin Shah</h1>
 			<div style="display: inline-block">
