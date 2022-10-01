@@ -4,47 +4,38 @@ December 2021
 
 Compiler script for personal website
 """
-from typing import Dict, List, NamedTuple
+
 import json
+import os
+from typing import Dict, List
 
 from bs4 import BeautifulSoup  # type: ignore
 
 
-class Entry(NamedTuple):
-    name: str
-    desc: str
-    links: List[Dict[str, str]]
-    image: str
-    meta: str = ""
+def entry_to_html(
+    name: str, desc: str, links: List[Dict[str, str]], image: str, meta: str = ""
+) -> str:
+    def prefix() -> str:
+        return f"[{meta}] " if meta else ""
 
-    def prefix(self) -> str:
-        return f"[{self.meta}] " if self.meta else ""
+    link = '[<a href="{link}" target="_blank">{label}</a>]'
 
-    def to_html(self) -> str:
-        link = '[<a href="{link}" target="_blank">{label}</a>]'
+    link_tags = "\n".join(
+        link.format(link=link_info["link"], label=link_info["label"].lower())
+        for link_info in links
+    )
 
-        links = "\n".join(
-            link.format(link=link_info["link"], label=link_info["label"].lower())
-            for link_info in self.links
-        )
-
-        return """
-        <li class="entry">
-            {image}
+    return f"""
+        <div class="entry">
+            <img class='icon' src={image!r} alt={os.path.basename(image)!r} loading="lazy"/>
             <div>
-                <strong>{name}</strong>
+                <strong>{prefix() + name}</strong>
                 <br/>
                 {desc}
-                {links}
+                {link_tags}
             </div>
-        </li>
-        
-        """.format(
-            name=self.prefix() + self.name,
-            desc=self.desc,
-            links=links,
-            image=f"<img class='icon' src={self.image!r}/>",
-        )
+        </div>
+        """
 
 
 with open("header.html", "r") as f:
@@ -55,13 +46,13 @@ with open("projects.json") as f:
 
 html = "<hr>".join(
     (
-        f'<h3 style="color: #1d73db">{category}</h3>{"".join(Entry(**entry).to_html() for entry in raw_entries)}'
+        f'<h3 style="color: #1d73db">{category}</h3>{"".join(entry_to_html(**entry) for entry in raw_entries)}'
         for category, raw_entries in data.items()
     )
 )
 
 html = BeautifulSoup(html, features="html.parser")
-header.ul.append(html)
+header.body.append(html)
 
 with open("index.html", "w") as f:
     f.write(str(header))

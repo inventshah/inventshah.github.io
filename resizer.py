@@ -7,7 +7,7 @@ Script to compress images
 import os
 import cv2
 
-MAX_LENGTH = 500
+MAX_LENGTH = 300
 DIR = "images/"
 
 images = (os.path.join(DIR, file) for file in os.listdir(DIR) if file.endswith(".png"))
