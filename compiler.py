@@ -27,7 +27,7 @@ def entry_to_html(
 
     return f"""
         <div class="entry">
-            <img class='icon' src={image!r} alt={os.path.basename(image)!r} loading="lazy"/>
+            <img class='icon' src={image.replace(".png",".webp")!r} alt={os.path.basename(image)!r} loading="lazy" width="90" height="90"/>
             <div>
                 <strong>{prefix() + name}</strong>
                 <br/>
@@ -46,7 +46,7 @@ with open("projects.json") as f:
 
 html = "<hr>".join(
     (
-        f'<h3 style="color: #1d73db">{category}</h3>{"".join(entry_to_html(**entry) for entry in raw_entries)}'
+        f'<h2 style="color: #145aaf">{category}</h2>{"".join(entry_to_html(**entry) for entry in raw_entries)}'
         for category, raw_entries in data.items()
     )
 )

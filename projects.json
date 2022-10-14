@@ -65,14 +65,19 @@
 	"Education Projects": [
 		{
 			"name": "Project RAISE",
-			"desc": "Research in improving social skills of students with disabilities through teaching basic coding. Developing a platform to deliver knowledge driven virtual characters over the web. Submitted to Frontiers in VR.",
+			"desc": "Research in improving social skills of students with disabilities through teaching basic coding. Developing a platform to deliver knowledge driven virtual characters over the web. Published in Frontiers in VR.",
 			"image": "images/zoobee.png",
 			"links": [
+				{
+					"link": "https://www.frontiersin.org/articles/10.3389/frvir.2022.968312/full",
+					"label": "paper"
+				},
 				{
 					"link": "https://raiseups.org/",
 					"label": "raiseup"
 				}
-			]
+			],
+			"meta": "Paper"
 		},
 		{
 			"name": "DebriefScape",

@@ -6,6 +6,8 @@
 <link href="images/logo.svg" rel="icon" type="image/png"/>
 <meta content="noindex" name="robots"/>
 <meta content="noindex" name="googlebot"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://latex.now.sh/style.css" rel="stylesheet" type="text/css"/>
 <style>
 			.socials {
@@ -23,9 +25,10 @@
 			}
 			.icon {
 				margin-right: 10px;
-				height: calc("70px * attr(height) / attr(width)");
-				width: 90px;
+				width: min(90px, 15vw);
 				border-radius: 8px;
+				aspect-ratio: 1/1;
+				object-fit: cover;
 			}
 			body {
 				display: block;
@@ -42,16 +45,30 @@
 				border-radius: 10px;
 				margin-top: 5px;
 			}
-		</style>
-</head>
-<body onload="onload()">
-<script>
-			function onload() {
-				if (window.innerWidth < 1000) {
-					document.body.style.maxWidth = `${90}%`;
+			h2 {
+				font-size: 1.4em;
+				line-height: 1.625rem;
+				margin-top: 2.5rem;
+			}
+
+			@media (max-width: 768px) {
+				body {
+					max-width: 90%;
+					font-size: 0.8rem;
+					padding: 1em 0.5em;
+					text-align: left;
+				}
+				h1 {
+					font-size: 2rem;
+					margin-bottom: 0.1rem;
+				}
+				h2 {
+					margin-top: 1rem;
 				}
 			}
-		</script>
+		</style>
+</head>
+<body>
 <div style="text-align: center">
 <h1>Sachin Shah</h1>
 <div style="display: inline-block">
@@ -60,9 +77,9 @@
 </div>
 </div>
 <hr/>
-<h3 style="color: #1d73db">Computer Vision and Machine Learning Projects</h3>
+<h2 style="color: #145aaf">Computer Vision and Machine Learning Projects</h2>
 <div class="entry">
-<img alt="brdf.png" class="icon" loading="lazy" src="images/brdf.png"/>
+<img alt="brdf.png" class="icon" height="90" loading="lazy" src="images/brdf.webp" width="90"/>
 <div>
 <strong>[Paper] Discovering an Interpretable Latent Space for Measured BRDF</strong>
 <br/>
@@ -71,7 +88,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="fer.png" class="icon" loading="lazy" src="images/fer.png"/>
+<img alt="fer.png" class="icon" height="90" loading="lazy" src="images/fer.webp" width="90"/>
 <div>
 <strong>[Poster] Face De-occlusion Research</strong>
 <br/>
@@ -80,7 +97,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="meanshift.png" class="icon" loading="lazy" src="images/meanshift.png"/>
+<img alt="meanshift.png" class="icon" height="90" loading="lazy" src="images/meanshift.webp" width="90"/>
 <div>
 <strong>Image Segmentation</strong>
 <br/>
@@ -90,7 +107,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="kernel.png" class="icon" loading="lazy" src="images/kernel.png"/>
+<img alt="kernel.png" class="icon" height="90" loading="lazy" src="images/kernel.webp" width="90"/>
 <div>
 <strong>Image Kernels</strong>
 <br/>
@@ -99,7 +116,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="perceptron.png" class="icon" loading="lazy" src="images/perceptron.png"/>
+<img alt="perceptron.png" class="icon" height="90" loading="lazy" src="images/perceptron.webp" width="90"/>
 <div>
 <strong>Perceptron Machine Learning</strong>
 <br/>
@@ -107,18 +124,19 @@
                 [<a href="https://github.com/inventshah/Perceptron-ML" target="_blank">code</a>]
             </r,></div>
 </div>
-<hr/><h3 style="color: #1d73db">Education Projects</h3>
+<hr/><h2 style="color: #145aaf">Education Projects</h2>
 <div class="entry">
-<img alt="zoobee.png" class="icon" loading="lazy" src="images/zoobee.png"/>
+<img alt="zoobee.png" class="icon" height="90" loading="lazy" src="images/zoobee.webp" width="90"/>
 <div>
-<strong>Project RAISE</strong>
+<strong>[Paper] Project RAISE</strong>
 <br/>
-                Research in improving social skills of students with disabilities through teaching basic coding. Developing a platform to deliver knowledge driven virtual characters over the web. Submitted to Frontiers in VR.
-                [<a href="https://raiseups.org/" target="_blank">raiseup</a>]
+                Research in improving social skills of students with disabilities through teaching basic coding. Developing a platform to deliver knowledge driven virtual characters over the web. Published in Frontiers in VR.
+                [<a href="https://www.frontiersin.org/articles/10.3389/frvir.2022.968312/full" target="_blank">paper</a>]
+[<a href="https://raiseups.org/" target="_blank">raiseup</a>]
             </div>
 </div>
 <div class="entry">
-<img alt="dscape.ico" class="icon" loading="lazy" src="images/dscape.ico"/>
+<img alt="dscape.ico" class="icon" height="90" loading="lazy" src="images/dscape.ico" width="90"/>
 <div>
 <strong>DebriefScape</strong>
 <br/>
@@ -126,9 +144,9 @@
                 [<a href="https://debriefscape.org/" target="_blank">tool</a>]
             </div>
 </div>
-<hr/><h3 style="color: #1d73db">Statistics in Debate</h3>
+<hr/><h2 style="color: #145aaf">Statistics in Debate</h2>
 <div class="entry">
-<img alt="ldskill.png" class="icon" loading="lazy" src="images/ldskill.png"/>
+<img alt="ldskill.png" class="icon" height="90" loading="lazy" src="images/ldskill.webp" width="90"/>
 <div>
 <strong>[Paper] Quantifying Skill in Lincoln-Douglas Debate</strong>
 <br/>
@@ -137,7 +155,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="onlinedebate.png" class="icon" loading="lazy" src="images/onlinedebate.png"/>
+<img alt="onlinedebate.png" class="icon" height="90" loading="lazy" src="images/onlinedebate.webp" width="90"/>
 <div>
 <strong>[Paper] Statistical Analysis of the Impact of the Transition to Online Tournaments in LD Debate</strong>
 <br/>
@@ -146,7 +164,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="sidebias.png" class="icon" loading="lazy" src="images/sidebias.png"/>
+<img alt="sidebias.png" class="icon" height="90" loading="lazy" src="images/sidebias.webp" width="90"/>
 <div>
 <strong>[Paper] Statistical Analysis of Side-Bias in High School Lincoln-Douglas Debate Article Series</strong>
 <br/>
@@ -161,9 +179,9 @@
 [<a href="http://nsdupdate.com/2018/a-statistical-analysis-of-side-bias-on-the-2018-september-october-lincoln-douglas-debate-topic-by-sachin-shah/" target="_blank">october 2018</a>]
             </div>
 </div>
-<hr/><h3 style="color: #1d73db">Robotics and Autonomous Control Systems</h3>
+<hr/><h2 style="color: #145aaf">Robotics and Autonomous Control Systems</h2>
 <div class="entry">
-<img alt="worlds.png" class="icon" loading="lazy" src="images/worlds.png"/>
+<img alt="worlds.png" class="icon" height="90" loading="lazy" src="images/worlds.webp" width="90"/>
 <div>
 <strong>[Talk] Custom Vision for FTC, 2019 FIRST Championship Robotics Conference</strong>
 <br/>
@@ -173,7 +191,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="lunarknights.png" class="icon" loading="lazy" src="images/lunarknights.png"/>
+<img alt="lunarknights.png" class="icon" height="90" loading="lazy" src="images/lunarknights.webp" width="90"/>
 <div>
 <strong>Lunar Knights Robotics Team Control Systems Lead</strong>
 <br/>
@@ -183,7 +201,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="first.png" class="icon" loading="lazy" src="images/first.png"/>
+<img alt="first.png" class="icon" height="90" loading="lazy" src="images/first.webp" width="90"/>
 <div>
 <strong>FIRST Robotics FTC Team Control Systems Lead</strong>
 <br/>
@@ -191,9 +209,9 @@
                 [<a href="https://github.com/FTC-9277/2019-game" target="_blank">code</a>]
             </div>
 </div>
-<hr/><h3 style="color: #1d73db">Fun</h3>
+<hr/><h2 style="color: #145aaf">Fun</h2>
 <div class="entry">
-<img alt="codegolf.png" class="icon" loading="lazy" src="images/codegolf.png"/>
+<img alt="codegolf.png" class="icon" height="90" loading="lazy" src="images/codegolf.webp" width="90"/>
 <div>
 <strong>Code Golf</strong>
 <br/>
@@ -202,7 +220,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="sorts.png" class="icon" loading="lazy" src="images/sorts.png"/>
+<img alt="sorts.png" class="icon" height="90" loading="lazy" src="images/sorts.webp" width="90"/>
 <div>
 <strong>Sorting Methods</strong>
 <br/>
@@ -212,7 +230,7 @@
             </div>
 </div>
 <div class="entry">
-<img alt="assorted.png" class="icon" loading="lazy" src="images/assorted.png"/>
+<img alt="assorted.png" class="icon" height="90" loading="lazy" src="images/assorted.webp" width="90"/>
 <div>
 <strong>Assorted Projects</strong>
 <br/>

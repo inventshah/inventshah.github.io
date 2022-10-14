@@ -5,6 +5,9 @@
 		<link rel="icon" type="image/png" href="images/logo.svg" />
 		<meta name="robots" content="noindex" />
 		<meta name="googlebot" content="noindex" />
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link
 			rel="stylesheet"
@@ -27,9 +30,10 @@
 			}
 			.icon {
 				margin-right: 10px;
-				height: calc("70px * attr(height) / attr(width)");
-				width: 90px;
+				width: min(90px, 15vw);
 				border-radius: 8px;
+				aspect-ratio: 1/1;
+				object-fit: cover;
 			}
 			body {
 				display: block;
@@ -46,17 +50,31 @@
 				border-radius: 10px;
 				margin-top: 5px;
 			}
+			h2 {
+				font-size: 1.4em;
+				line-height: 1.625rem;
+				margin-top: 2.5rem;
+			}
+
+			@media (max-width: 768px) {
+				body {
+					max-width: 90%;
+					font-size: 0.8rem;
+					padding: 1em 0.5em;
+					text-align: left;
+				}
+				h1 {
+					font-size: 2rem;
+					margin-bottom: 0.1rem;
+				}
+				h2 {
+					margin-top: 1rem;
+				}
+			}
 		</style>
 	</head>
 
-	<body onload="onload()">
-		<script>
-			function onload() {
-				if (window.innerWidth < 1000) {
-					document.body.style.maxWidth = `${90}%`;
-				}
-			}
-		</script>
+	<body>
 		<div style="text-align: center">
 			<h1>Sachin Shah</h1>
 			<div style="display: inline-block">

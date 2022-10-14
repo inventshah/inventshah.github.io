@@ -5,7 +5,7 @@ December 2021
 Script to compress images
 """
 import os
-import cv2
+from PIL import Image
 
 MAX_LENGTH = 300
 DIR = "images/"
@@ -13,15 +13,13 @@ DIR = "images/"
 images = (os.path.join(DIR, file) for file in os.listdir(DIR) if file.endswith(".png"))
 
 for path in images:
-    img = cv2.imread(path)
-    height, width, channels = img.shape
-    if height < MAX_LENGTH > width:
-        continue
+    img = Image.open(path)
+    width, height = img.size
+    # if height < MAX_LENGTH > width:
+    #     continue
 
     factor = MAX_LENGTH / max(height, width)
 
-    img = cv2.resize(
-        img, (int(width * factor), int(height * factor)), interpolation=cv2.INTER_AREA
-    )
+    img = img.resize((int(width * factor), int(height * factor)))
 
-    cv2.imwrite(path, img)
+    img.save(path.replace(".png", ".webp"), format="webp")
