@@ -2,7 +2,7 @@
 	"Computer Vision and Machine Learning Projects": [
 		{
 			"name": "Discovering an Interpretable Latent Space for Measured BRDF",
-			"desc": "Research in simultaneous learning of measured BRDF compression and synthetic material generation. Utilized beta-variational autoencoders to disentangle the learned latent space. Submitted to Eurographics 2023.",
+			"desc": "Research in simultaneous learning of measured BRDF compression and synthetic material generation. Utilized beta-variational autoencoders to disentangle the learned latent space.",
 			"image": "images/brdf.png",
 			"links": [
 				{
@@ -73,15 +73,15 @@
 					"label": "paper"
 				},
 				{
-					"link": "https://raiseups.org/",
-					"label": "raiseup"
+					"link": "https://wave-vr.org/",
+					"label": "wave"
 				}
 			],
 			"meta": "Paper"
 		},
 		{
 			"name": "DebriefScape",
-			"desc": "Developed session observation tool to tag and analyze events. Supports live tagging and multi-session analysis. Currently used as a coaching tool to train teachers.",
+			"desc": "Developed session observation tool to tag and analyze events. Supports live tagging and multi-session analysis. Used as a coaching tool to train teachers and label videos.",
 			"image": "images/dscape.ico",
 			"links": [
 				{
@@ -98,7 +98,7 @@
 			"image": "images/ldskill.png",
 			"links": [
 				{
-					"link": "http://nsdupdate.com/2021/quantifying-skill-in-lincoln-douglas-debate-by-sachin-shah/",
+					"link": "https://www.nsdebatecamp.com/nsdupdate/quantifying-skill-in-lincoln-douglas-debate",
 					"label": "article"
 				}
 			],
@@ -110,7 +110,7 @@
 			"image": "images/onlinedebate.png",
 			"links": [
 				{
-					"link": "http://nsdupdate.com/2021/a-statistical-analysis-of-the-impact-of-the-transition-to-online-tournaments-in-lincoln-douglas-debate-by-sachin-shah/",
+					"link": "https://www.nsdebatecamp.com/nsdupdate/a-statistical-analysis-of-the-impact-of-the-transition-to-online-tournaments-in-lincoln-douglas",
 					"label": "article"
 				}
 			],
@@ -122,36 +122,12 @@
 			"image": "images/sidebias.png",
 			"links": [
 				{
+					"label": "February 2021",
+					"link": "https://www.nsdebatecamp.com/nsdupdate/a-statistical-study-of-side-bias-on-the-2021-jan-feb-ld-debate-topic"
+				},
+				{
 					"link": "https://github.com/inventshah/SideBiasCrawler",
 					"label": "code"
-				},
-				{
-					"label": "February 2021",
-					"link": "http://nsdupdate.com/2021/a-statistical-study-of-side-bias-on-the-2021-january-february-lincoln-douglas-debate-topic-by-sachin-shah/"
-				},
-				{
-					"label": "February 2020",
-					"link": "http://nsdupdate.com/2020/a-statistical-analysis-of-side-bias-on-the-2020-january-february-lincoln-douglas-debate-topic-by-sachin-shah/"
-				},
-				{
-					"label": "November 2019",
-					"link": "http://nsdupdate.com/2019/a-statistical-analysis-of-side-bias-on-the-2019-november-december-lincoln-douglas-debate-topic-by-sachin-shah/"
-				},
-				{
-					"label": "September 2019",
-					"link": "http://nsdupdate.com/2019/a-statistical-analysis-of-side-bias-on-the-2019-september-october-lincoln-douglas-debate-topic-by-sachin-shah/"
-				},
-				{
-					"label": "February 2019",
-					"link": "http://nsdupdate.com/2019/a-statistical-analysis-of-side-bias-on-the-2019-january-february-lincoln-douglas-debate-topic/"
-				},
-				{
-					"label": "November 2018",
-					"link": "http://nsdupdate.com/2018/a-statistical-analysis-of-side-bias-on-the-2018-november-december-lincoln-douglas-debate-topic/"
-				},
-				{
-					"label": "October 2018",
-					"link": "http://nsdupdate.com/2018/a-statistical-analysis-of-side-bias-on-the-2018-september-october-lincoln-douglas-debate-topic-by-sachin-shah/"
 				}
 			],
 			"meta": "Paper"
