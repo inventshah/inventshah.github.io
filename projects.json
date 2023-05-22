@@ -54,17 +54,29 @@
 	],
 	"Education Projects": [
 		{
-			"name": "Project RAISE",
-			"desc": "Research in improving social skills of students with disabilities through teaching basic coding. Developing a platform to deliver knowledge driven virtual characters over the web. Published in Frontiers in VR.",
-			"image": "images/zoobee.png",
+			"name": "WAVE: A Web-Based Platform for Delivering Knowledge-Driven Virtual Experiences",
+			"desc": "Research and development of automated virtual avatar delivery through the web. Used in support of NSF and Department of Education grants. Published in IEEE Computer Graphics and Applications.",
+			"image": "images/wave.png",
 			"links": [
 				{
-					"link": "https://www.frontiersin.org/articles/10.3389/frvir.2022.968312/full",
+					"link": "https://ieeexplore.ieee.org/document/10128913",
 					"label": "paper"
 				},
 				{
 					"link": "https://wave-vr.org/",
 					"label": "wave"
+				}
+			],
+			"meta": "Paper"
+		},
+		{
+			"name": "RAISE: Robotics & AI to improve STEM and social skills for elementary school students",
+			"desc": "Research in improving social skills of students with disabilities through teaching basic coding and virtual AI companions. Funded by the Department of Education. Published in Frontiers in VR.",
+			"image": "images/zoobee.png",
+			"links": [
+				{
+					"link": "https://www.frontiersin.org/articles/10.3389/frvir.2022.968312/full",
+					"label": "paper"
 				}
 			],
 			"meta": "Paper"
