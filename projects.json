@@ -17,10 +17,14 @@
 			"meta": "Paper"
 		},
 		{
-			"name": "Discovering an Interpretable Latent Space for Measured BRDF",
-			"desc": "Research in simultaneous learning of measured BRDF compression and synthetic material generation. Utilized beta-variational autoencoders to disentangle the learned latent space. Published in Computer Graphics International 2023's Lecture Notes for Computer Science.",
+			"name": "Parametrization of Measured BRDF for Flexible Material Editing",
+			"desc": "Research in simultaneous learning of measured BRDF compression and synthetic material generation. Utilized beta-variational autoencoders to disentangle the learned latent space. Published in Computer Graphics International Conference 2023's Advance Computer Graphics Lecture Notes for Computer Science.",
 			"image": "images/brdf.png",
 			"links": [
+				{
+					"link": "https://link.springer.com/chapter/10.1007/978-3-031-50072-5_26",
+					"label": "paper"
+				},
 				{
 					"link": "https://arxiv.org/pdf/2208.03914.pdf",
 					"label": "arxiv"
