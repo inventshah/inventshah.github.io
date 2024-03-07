@@ -4,6 +4,7 @@ December 2021
 
 Script to compress images
 """
+
 import os
 from PIL import Image
 
@@ -15,11 +16,8 @@ images = (os.path.join(DIR, file) for file in os.listdir(DIR) if file.endswith("
 for path in images:
     img = Image.open(path)
     width, height = img.size
-    # if height < MAX_LENGTH > width:
-    #     continue
-
-    factor = MAX_LENGTH / max(height, width)
-
-    img = img.resize((int(width * factor), int(height * factor)))
+    if height > MAX_LENGTH or width > MAX_LENGTH:
+        factor = MAX_LENGTH / max(height, width)
+        img = img.resize((int(width * factor), int(height * factor)))
 
     img.save(path.replace(".png", ".webp"), format="webp")
