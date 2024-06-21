@@ -2,9 +2,13 @@
 	"Computer Vision and Machine Learning Projects": [
 		{
 			"name": "CodedVO: Coded Visual Odometry",
-			"desc": "Developed novel scale-aware monocular visual odometry method through leveraging optical constraints. Accepted to the 2024 IEEE Robotics and Automation Letters (IEEE RA-L).",
+			"desc": "Developed novel scale-aware monocular visual odometry method through leveraging optical constraints. Published in 2024 IEEE Robotics and Automation Letters (IEEE RA-L).",
 			"image": "images/coded-vo.png",
 			"links": [
+				{
+					"link": "https://ieeexplore.ieee.org/document/10564186",
+					"label": "paper"
+				},
 				{
 					"link": "https://prg.cs.umd.edu/CodedVO",
 					"label": "project"
